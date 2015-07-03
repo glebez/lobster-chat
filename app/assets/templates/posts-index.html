@@ -1,0 +1,30 @@
+
+  <div class="container content">
+    <form name="postForm" class="create-post" ng-submit="addPost()">
+      <textarea name="post-text" id="post-text" cols="30" rows="10" class="create-post__input" placeholder="What's up crustacean?" ng-model="text" lc-enter="addPost($scope)"></textarea>
+      <input type="submit" value="Post!" class="btn">
+    </form>
+    <div class="post-list">
+      <a ng-href="#/posts/{{post.id}}" ng-repeat="post in posts | orderBy: '-timestamp'">
+        <div class="post-preview">
+          <div class="post-preview__body">
+            <p class="post-preview__text">{{post.text | characters:200 :true}}</p>
+          </div>
+          <footer class="post-preview__footer">
+            <p class="post-preview__comments" count="post.comments.length" when="{'0': 'Needs your comment!',
+                    'one': '{} comment',
+                    'other': '{} comments'}" 
+                       ng-pluralize>
+            </p>
+          </footer>
+        </div>
+      </a>
+      <div class="no-posts" ng-hide="posts.length">
+        <div class="no-posts__img"></div>
+        <p class="no-posts__text">
+          I guess there are no posts today, yet!
+        </p>
+      </div>
+      
+    </div>
+  </div>

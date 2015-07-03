@@ -1,0 +1,29 @@
+.no-posts {
+  width: 164px;
+  margin: 90px auto 150px;
+  text-align: center;
+  font-size: 18px;
+  color: $no-posts-text;
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 134px;
+    margin: 60px auto 120px;
+    font-size: 14px;
+  }
+
+  &__img {
+    width: 132px;
+    height: 78px;
+    margin: 0 auto 15px;
+    background: url('../img/blankslate_illustration_large.svg') no-repeat;
+    background-size: 100% auto;
+    
+    @media screen and (max-width: $screen-xs-max) {
+      width: 65px;
+      height: 37px;
+      margin-bottom: 20px;
+      background-image: url('../img/blankslate_illustration_small.svg');
+
+    }
+  }
+}

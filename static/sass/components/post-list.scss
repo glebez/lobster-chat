@@ -1,0 +1,17 @@
+.post-list {
+  max-width: 500px;
+  margin: 0 auto 60px;
+  
+  @media screen and (max-width: $screen-xs-max) {
+    padding: 0 10px;
+    max-width: auto;
+  }
+
+
+  a,
+  a:hover,
+  a:focus {
+    color: initial;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,18 @@
+
+<main>
+  <div class="container content">
+    <form name="commentForm" class="single-post" ng-submit="addComment()">
+      <p class="single-post__text">
+        {{post.text}}
+      </p>
+      <div class="single-post__comments-list">
+        <p class="single-post__comment" ng-repeat="comment in post.comments | orderBy: '-timestamp'">{{comment.text}}</p>
+        <div class="single-post__add-comment">
+          <div class="comment-input__wrap"><input class="comment-input" type="text" name="" id="" placeholder="Your comment..." ng-model="comment.text"></div>
+          <button type="submit" class="btn">Add <span class="visible-xs">Comment!</span></button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+</main>

@@ -1,0 +1,64 @@
+.main-header {
+  position: relative;
+  min-height: 234px;
+  padding-top: 56px;
+  background-color: $main-contrast-color;
+
+  @media screen and (max-width: $screen-xs-max) {
+    min-height: 78px;
+    padding-top: 24px;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 410px;
+    height: 96px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    background: url('../img/logo_large.svg') no-repeat;
+    background-size: 100% auto;
+
+    @media screen and (max-width: $screen-xs-max) {
+      width: 163px;
+      height: 31px;
+      background-image: url('../img/logo_small.svg')
+    }
+  }
+
+  &__back-btn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 55px;
+    margin-top: -50px;
+    border-radius: 3px;
+    background-color: $back-btn-bg;
+    background-image: url('../img/back_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:hover {
+      background-color: $back-btn-hover;
+    }
+
+    &:active {
+      background-color: $back-btn-pressed;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      width: 30px;
+      height: 30px;
+      left: 5px;
+      margin-top: -15px;
+      background-color: transparent;
+      background-size: 13px auto;
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+}

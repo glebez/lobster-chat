@@ -1,0 +1,41 @@
+body {
+  background-color: $main-silent-color;
+  font-family: $main-font;
+  color: $main-text;
+  font-size: 20px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+main {
+  position: relative;
+}
+
+.content {
+  margin-top: -27px;
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 15px;
+  }
+}
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+.visible-xs {
+  @media screen and (min-width: $screen-sm-min) {
+    display: none;
+  }
+
+}

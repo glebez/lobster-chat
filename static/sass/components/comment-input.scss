@@ -1,0 +1,41 @@
+.comment-input {
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+  padding-left: 52px;
+  border: 1px solid $comment-border;
+  border-radius: 3px;
+  outline: none;
+
+  &:focus {
+    box-shadow: inset 0 1px 1px 1px $input-inner-shdw;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    height: 51px;
+    padding-left: 15px;
+
+  }
+
+  &__wrap {
+    position: relative;
+    //margin-bottom: 10px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 21px;
+      height: 20px;
+      top: 50%;
+      left: 15px;
+      margin-top: -10px;
+      background: url('../img/comments_counter_icon.svg') no-repeat;
+
+      @media screen and (max-width: $screen-xs-max) {
+        display: none;
+      }
+
+    }
+  }
+}

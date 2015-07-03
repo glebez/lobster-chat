@@ -1,0 +1,53 @@
+$main-contrast-color: #E74C3C;
+$main-silent-color:   #F6F6F6;
+$main-text:           #434343;
+
+$pad-bg:   #fff;
+$pad-shdw: rgba(0,0,0,.2);
+
+$input-inner-shdw: rgba(0,0,0,.05);
+$input-border:     #DFDFDF;
+
+$btn-text: #fff;
+$btn-pressed: #CD3728;
+$btn-inner-shdw: rgba(0,0,0,.15);
+
+$back-btn-bg: #CD3728;
+$back-btn-hover: #B5281A;
+$back-btn-pressed: #A52215;
+
+$post-preview-shdw:    rgba(#1F2B34, .15);
+$post-preview-border:  rgba( #C9C9C9, .5);
+$post-preview-comment: #B3B3B3;
+$post-preview-hvr-shdw-top: #EBEBEB;
+$post-preview-hvr-shdw-btm: rgba(0,0,0,.15);
+$post-preview-pushdown-bg: #EDEDED;
+$post-preview-pushdown-shdw: rgba(0,0,0,.1);
+
+$comment-border: rgba( #C9C9C9, .5);
+$comment-text: #818181;
+
+$no-posts-text: #B3B3B3;
+
+$main-footer-text: #D5D5D5;
+
+
+
+$main-font: 'PT Sans', Arial, sans-serif;
+
+
+// Grid variables
+
+$grid-gutter-width: 30px;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$container-sm: (720px + $grid-gutter-width);
+$container-md: (940px + $grid-gutter-width);
+$container-lg: (1140px + $grid-gutter-width);

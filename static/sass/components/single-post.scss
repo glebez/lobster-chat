@@ -1,0 +1,88 @@
+.single-post {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: $pad-bg;
+  box-shadow: 0 4px 5px $pad-shdw;
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding: 13px 15px 15px;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__comments-list {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 5px 20px 25px;
+    background-color: $main-silent-color;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+
+    @media screen and (max-width: $screen-xs-max) {
+      padding: 5px 15px 20px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 15px;
+      left: 0;
+      top: -15px;
+      background: url('../img/comment_tip.svg') no-repeat 50% 0;
+      background-size: 100% auto; 
+      z-index: 0;
+    }
+  }
+
+  &__comment {
+    padding: 15px 0;
+    border-bottom: 1px solid $comment-border;
+    color: $comment-text;
+    font-size: 14px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      padding: 11px 0;
+    }
+  }
+
+  &__add-comment {
+    padding-top: 20px;
+
+    @include clearfix;
+
+    .btn {
+      width: 100%;
+    }
+
+    .comment-input__wrap {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+      .btn {
+        float: right;
+        height: 56px;
+        width: 19%; // 96 / 510
+      }
+
+      .comment-input__wrap {
+        float: left;
+        width: 78%; // 399 / 510
+        margin-bottom: 0;
+
+      }
+    }
+
+  }
+}
